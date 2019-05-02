@@ -32,5 +32,5 @@ resource "aws_route53_record" "name_servers" {
   type = "NS"
   ttl  = 300
 
-  records = "${split(",", local.name_servers)}"
+  records = ["${split(",", local.name_servers)}"]
 }
